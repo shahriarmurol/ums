@@ -275,7 +275,7 @@
                             <a href="announcement.php"><i class="fa fa-bullhorn fa-fw"></i> Announcements</a>
                         </li>
                         <li>
-                            <a href="announcement.php"><i class="fa fa-bell-o fa-fw"></i> Notices</a>
+                            <a href="notices.php"><i class="fa fa-bell-o fa-fw"></i> Notices</a>
                         </li>
                         
                         <!-- /ums --> 
@@ -421,7 +421,17 @@
                                     <i class="fa fa-bullhorn fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
+                                    <div class="huge">
+                                        <?php 
+                                            require_once('config.php');
+                                            $slt = "SELECT * FROM announcement";
+                                            $qre = mysqli_query($DBC,$slt);
+                                            $data=mysqli_fetch_array($qre);
+                                            $msg = count($data);
+                                            $msg+=1;
+                                            echo "$msg";
+                                        ?>
+                                    </div>
                                     <div>Announcement</div>
                                 </div>
                             </div>
@@ -443,7 +453,17 @@
                                     <i class="fa fa-bell-o fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
+                                    <div class="huge">
+                                        <?php 
+                                            require_once('config.php');
+                                            $slt = "SELECT * FROM notices";
+                                            $qre = mysqli_query($DBC,$slt);
+                                            $data=mysqli_fetch_array($qre);
+                                            $msg = count($data);
+                                            $msg+=1;
+                                            echo "$msg";
+                                        ?>
+                                    </div>
                                     <div>Notices</div>
                                 </div>
                             </div>

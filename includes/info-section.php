@@ -48,7 +48,7 @@
 						$slt = "SELECT * FROM notices ORDER BY id DESC";
 						$qre = mysqli_query($DBC,$slt);
 						while($data=mysqli_fetch_array($qre)){ ?>
-							<a href="#">
+							<a href="all-notice.php?id=<?= $data['id']; ?>">
 								<p><?= $data['notice']; ?></p>
 							</a>
 						<?php	}
