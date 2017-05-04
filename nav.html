@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nav</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		<!-- nav -->
+			<!-- / mobile icon -->
+		<div id="navicondiv" class="nav-icon-div">
+	          		<span id="navicon" class="glyphicon glyphicon-menu-hamburger"></span> 
+	        </button>	
+		</div>
+			<!-- / mobile icon -->
+		<nav>
+			<ul class="menu">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">About 
+					<!-- nav indicator -->
+					<span class="nav-indicator">
+						<i class="fa fa-angle-down" aria-hidden="true"></i>
+					</span>
+					<!-- nav indicator -->
+				</a> 
+					<!-- submenu level one -->
+					<ul class="sub-menu">
+						<li><a href="#">Menu Item 1</a></li>
+						<li><a href="#">Menu Item 2</a></li>
+						<li>
+							<a href="#">Menu Item 2
+								<!-- nav indicator -->
+								<span class="nav-indicator">
+									<i class="fa fa-angle-right" aria-hidden="true"></i>
+								</span>
+								<!-- nav indicator -->
+							</a>
+							<!-- sub-menu two-->
+							<ul class="sub-menu">
+								<li><a href="#">Menu Item 3</a></li>
+								<li><a href="#">Menu Item 3</a></li>
+								<li>
+									<a href="#">Menu Item 3
+										<!-- nav indicator -->
+										<span class="nav-indicator">
+										<i class="fa fa-angle-right" aria-hidden="true"></i>
+										</span>
+										<!-- nav indicator -->
+									</a>
+								 <!-- submenu level three -->
+								 <ul class="sub-menu">
+									<li><a href="#">Menu Item 4</a></li>
+									<li><a href="#">Menu Item 4</a></li>
+									<li><a href="#">Menu Item 4</a></li>
+								</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+				<a href="#">Service
+					<!-- nav indicator -->
+					<span class="nav-indicator">
+						<i class="fa fa-angle-down" aria-hidden="true"></i>
+					</span>
+					<!-- nav indicator -->
+				</a>
+					<ul class="sub-menu">
+						<li><a href="#">Service Menu Item 1</a></li>
+						<li><a href="#">Service Menu Item 2</a></li>
+						<li><a href="#">Service Menu Item 3</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<!-- / nav -->
+		</div>
+	</div>
+</div>
+	
+<script src='js/jquery-1.12.4.min.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src='js/nav.js'></script>
+</body>
+</html>

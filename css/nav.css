@@ -1,0 +1,142 @@
+/*
+	Theme Naem: Multiple Dropdown Menu
+	Author : Shahriar Hosen
+	URL : http://shahriarmurol.tk
+*/
+/* nav style */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+.menu {
+  list-style: none;
+  background: #3498DB;
+  /* two menu space problem solve*/
+  margin: 0;
+  padding: 0; }
+
+.menu li {
+  display: inline-block;
+  background: #3498DB; }
+
+.menu li a {
+  padding: 20px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize; }
+
+.menu li:hover {
+  background: #1d6fa5; }
+
+/* active class */
+.menu li.active a {
+  background: #1d6fa5;
+  margin: 0; }
+
+/* style for submeny */
+.menu li {
+  position: relative; }
+
+.sub-menu {
+  left: 0;
+  padding: 5;
+  position: absolute;
+  top: 200%;
+  width: 200px;
+  border-top: 3px solid #1d6fa5;
+  /*display: none;*/
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s; }
+
+.sub-menu li {
+  display: block; }
+
+.menu li:hover > .sub-menu {
+  /* > ar mane imediat child (mane ul ar li)*/
+  display: block;
+  z-index: 99;
+  top: 100%;
+  opacity: 1;
+  visibility: visible; }
+
+/* submenu animation */
+.sub-menu .sub-menu {
+  left: 130%;
+  top: 0; }
+
+/* sub sub menu */
+.sub-menu li:hover > .sub-menu {
+  left: 100%;
+  top: 0; }
+
+/* nav indecator */
+.nav-indicator {
+  display: inline-block;
+  text-align: right;
+  margin-left: 5px; }
+
+/* nav icon */
+.nav-icon-div {
+  background: #3498DB;
+  padding: 8px;
+  text-align: right;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  display: none;
+  cursor: pointer; }
+
+#navicon {
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 8px;
+  margin-right: 15px; }
+
+/* Responsive */
+@media only screen and (max-width: 767px) {
+  .nav-icon-div {
+    display: block; }
+
+  .menu {
+    display: none; }
+
+  .nav-icon-div ul.open {
+    height: auto; }
+
+  .menu li {
+    display: block; }
+
+  .sub-menu {
+    width: 100%;
+    left: 0;
+    top: 200%; }
+
+  .menu li:hover > .sub-menu {
+    top: 100%; }
+
+  .sub-menu a {
+    margin-left: 15px; }
+
+  .sub-menu li:hover .sub-menu a {
+    margin-left: 30px; }
+
+  .sub-menu li:hover .sub-menu li:hover .sub-menu a {
+    margin-left: 45px; }
+
+  .sub-menu .sub-menu {
+    left: 0;
+    top: 100%;
+    transition: 1s; }
+
+  .sub-menu li:hover .sub-menu {
+    display: block;
+    left: 0;
+    top: 100%; } }
+
+/*# sourceMappingURL=nav.css.map */

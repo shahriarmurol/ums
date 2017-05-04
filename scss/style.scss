@@ -1,0 +1,416 @@
+@import "variables/var";
+@import "modules/nav";
+@import "modules/tab";
+/*
+	Theme Name: Institute Management System
+	Theme URI: http://shahriarmurol.tk/
+	Author: Md.Shahriar Hosen
+	Author URI: http://shahriarmurol.tk/
+	Description: Institute Management System is designed to automate the management process of an institute from student admission to examination management, from course management to schedule management, from human resource employment to salary management.
+	Version: 1.0
+	Licence: SIMT-Batch(2013-2014)
+	Team Info: Team Leader: Md.Shahriar Hosen, Team Member's - SK, NC
+	Department: Computer Technology
+*/
+/* reset */
+*{
+	margin:0;
+	padding: 0;
+	/*outline: 0;*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ul,ol{
+	list-style: none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	max-width: 100%;
+}
+/* commond style */
+.box{
+	width: 1170px;
+	margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 5px 12px 0 rgba(0,0,0,0.3);
+}
+.section-padding{
+	padding: 30px 0;
+}
+.mr15px{
+	margin-right: 15px;	
+}
+.section-title{
+	margin-bottom: 30px;
+}
+.title{
+	margin-bottom: 30px;
+}
+/* global style */
+html{}
+body{
+	background: url('../images/bg.png');
+	font-size: 14px;
+	line-height: 1.5em;
+	font-family: 'Open Sans', sans-serif;
+}
+/* =================== header section =============== */
+.header-section{
+	padding: 15px 0;
+	background: $theme-color;
+}
+.header-contact{}
+.header-contact ul{}
+.header-contact ul li{
+	display: inline;
+}
+.header-contact ul li a{
+	padding: 8px;
+}
+.header-contact ul li a i{
+	color: $white-color;
+}
+/* Top search */
+.header-search {
+  width: 280px;
+  display: block;
+  clear: both;
+  float: right;
+  padding-top: 15px;
+}
+.search-btn-field{
+	position: relative;
+}
+.search-icon {
+	position: absolute;
+	right: 45px;
+	bottom: 25px;
+	color: $theme-color;
+}
+/* =========== nav style ====================*/
+.nav-section{
+	background: $nav-bg-color;
+}
+/* ================== sliders ==================*/
+.slider-section{
+}
+.slider-section .container{
+	padding: 0;
+}
+.carousel-control.left,.carousel-control.right {
+  background-image: none
+}
+.carousel-indicators li {
+     background:$nav-bg-color !important;
+}
+.carousel-indicators .active {
+    background: $theme-color !important;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev,.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+	display: none;
+}
+/* ================= Announcement ===============*/
+.announcement{
+	background: #fff none repeat scroll 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+ 	border-bottom: 2px solid #ccc;
+  	border-top: 2px solid #ccc;
+ 	margin: 1px auto;
+  	padding:8px;
+}
+.latest-news-left{
+	width: 10%;
+	float: left;
+}
+.latest-news-left span{
+	display: inline-block;
+	padding-top: 5px;
+	font-weight: 700;
+	color: #ff5722;
+}
+.latest-news-right{
+	width: 90%;
+	float: left;
+	padding-left: 5px;
+}
+.latest-news-right marquee{
+	padding: 0 15px;
+}
+/* ticker */
+.ui-newsticker,.ui-newsticker:hover{
+	color: #666;
+	background: #fff;
+	cursor: pointer;
+}
+
+.news-event.ui-newsticker-list{}
+.news-event.ui-newsticker-item{}
+/* ============== campus info ================== */
+.informations{
+	background: #FDFDFD;
+	border: 1px solid #ccc;
+}
+.notice-title{
+	margin-bottom: 15px;
+	transition: 1s;
+}
+.campus-info img{
+	border:1px solid #ddd;
+	padding: 4px;
+	border-radius: 5px;
+}
+.campus-info img:hover{
+	border:2px solid #ddd;
+	transform: scale(1.5);
+	z-index: 9999;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.informations p{
+	margin-top: 15px;
+}
+/* notice board */
+.news-event{
+	border:1px solid #ccc;
+	padding: 15px;
+	border-radius: 5px;
+}
+.notice-marquee{
+	height: 400px;
+}
+.programmes-info{
+	border: 1px solid #ccc;
+	padding:15px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+/*  ============ notice , mange, stdinfo ============ */
+.notice-manage-stdinfo{
+	background:#FDFDFD; 
+	border:1px solid #ccc;
+	border-top: none;
+	margin-top: 1px; 
+}
+.marquee {
+  padding: 15px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background:$theme-color;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  display: inline-block;
+  box-shadow:5px 5px 5px #ddd;
+  -webkit-box-shadow:5px 5px 5px #ddd;
+  -moz-box-shadow:5px 5px 5px #ddd;
+}
+.marquee a p{
+	color: #fff;
+}
+.student-apply{
+	padding: 15px;	
+}
+/* =========== photo gellery ===========*/
+.photo-gellary-and-promo-video{
+	background: #2196F3;
+	position: relative;
+	color: #fff;
+}
+.photo-slider img{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.gellary-overlay {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+.fb-page{
+	padding: 15px;
+	padding-top: 30px;
+	width: 100%;
+	margin: 0 auto;
+}
+.fb-page iframe{
+	display: block;
+	margin: 0 auto;
+}
+.promo-video iframe{
+	border-radius: 3px;
+}
+/* ============== partner section ============== */
+.bx-wrapper{
+	padding: 15px;
+	width: 100% !important;
+	margin: 0 auto;
+	border:0;
+	margin-bottom: 30px;
+	box-shadow: 5px 5px 5px #ddd;
+	-webkit-box-shadow: 5px 5px 5px #ddd;
+	-moz-box-shadow: 5px 5px 5px #ddd;
+}
+.bx-wrapper ul li a img{
+	padding: 4px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	opacity: .7;
+}
+.bx-wrapper ul li:hover a img{
+	opacity: 1;
+}
+/* ============== footer section =============== */
+.footer-section{
+	background: $footer-bg-color;
+}
+.footer-top{
+	padding-bottom: 15px;
+}
+.footer-top .title h4{
+	color: #fff;
+	border-bottom: 1px solid #555;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.footer-top ul li a{
+  color: #ccc;
+  display: block;
+  padding: 4px 0;
+  text-decoration: none;
+}
+.footer-top ul li:hover a{
+	color: #fff;
+}
+/*  footer bottom */
+.footer-bottom {
+  border-top: 1px solid #555;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: -40px;
+  padding: 15px;
+}
+/* social link style */
+.social-link ul li{
+	display: inline-block;
+	padding: 3px;
+}
+.social-link ul li a{
+	color: #aaa;
+}
+.social-link ul li:hover a{
+	color: $theme-color;
+}
+/* ================ develoepr team style =============*/
+.developer{
+	color: $theme-color;
+	padding-left: 5px;
+}
+.developer:hover{
+	font-style: italic;
+	color: $theme-color;
+}
+/* ========================= about page style ================================== */
+ .map_canvas{
+ 	position: relative;
+ }
+  #map {
+  		width: 100%;
+        /*height: 100%;*/
+        min-height: 400px;
+  }
+   html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* ==================== gallery ================*/
+/* Removes the default 20px margin and creates some padding space for the indicators and controls */
+.gallery-section{
+	background:$theme-color;
+	position: relative;
+}
+.gallery-section:before{
+	position: absolute;
+	content: "";
+	 top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background: rgba(0,0,0,.5);
+}
+.carousel {
+    margin-bottom: 0;
+	padding: 0 40px 30px 40px;
+}
+/* Reposition the controls slightly */
+.carousel-control {
+	left: -12px;
+}
+.carousel-control.right {
+	right: -12px;
+}
+/* Changes the position of the indicators */
+.carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: 0px;
+	margin-right: -19px;
+}
+/* Changes the colour of the indicators */
+.carousel-indicators li {
+	background: #c0c0c0;
+}
+.carousel-indicators .active {
+background:#fff;
+}
+/* ============== admin panel style ============*/
+.action-btn{
+	display: inline-block;
+}
+/* ============== responsive css =============== */
+/*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+    	.box{
+			width: 1170px;
+			margin: 0 auto;
+		}
+    }
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+    	.box{
+			width: 970px;
+			margin: 0 auto;
+		}
+    }
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+    	.box{
+			width: 750px;
+			margin: 0 auto;
+		}
+    }
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+    	.box{
+			width: 470px;
+			margin: 0 auto;
+		}
+    }
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+    	.box{
+			width: 310px;
+			margin: 0 auto;
+		}
+    }

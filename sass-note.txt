@@ -1,0 +1,59 @@
+---------------- git hub ------
+//email
+usernaem : csehosenshahriar@gmail.com
+pass: @Imscsehosenshahriar
+
+//git
+url(first) : https://github.com/shahriarmurol/ims
+URL(present) : https://github.com/csehosenshahriar/ums.git
+csehosenshahriar@gmail.com
+ims_simit_batch_1314
+------------ sublime -----------
+shift + tab = code left indent 
+--------------google map api key -----------
+AIzaSyCbpfIqSlfyN7O08lc1flKYEfurLH6D744
+--------------- sass ----------
+ # Ruby Installer
+ # gem install sass (for windows) with CMD
+ # ruby -v
+ # sass -v
+ # intregetion sass --watch style.sassdi rector:style.css directory
+ sass --watch D:\SoftwareInstallation\xamp\htdocs\Ims\scss\style.scss:D:\SoftwareInstallation\xamp\htdocs\Ims\css\style.css
+
+ ------------ scss variable -------------
+ $primary-color: #1DD2AF;
+
+ --------- parshial -------
+ define
+ scss(folder)
+ 	variabls(folder)
+ 	 	 _var.scss
+
+ apply @import "variables/var";
+
+sass function
+ $nav-bg-hover-color:lighten($nav-bg-color, 15%);
+ $nav-bg-hover-color:darken(color, 15%);
+--------------------- jqurey ------------
+(function($){
+	
+})(jQuery);
+ --------------- theme note -----------
+ <!-- bootstrap structure -->
+<div class="container-fluid">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /bootstrap structure -->
+	
+# logo size 436x86
+# slider img 1200 x 400
+# http://placehold.it/436x86
+# Theme colro: #22D18D
+# navbar-fixed-top // for fixed nev
+# campuse photo size 639 x 488
