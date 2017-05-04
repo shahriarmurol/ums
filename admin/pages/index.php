@@ -267,6 +267,18 @@
                         <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
+                        <!-- ums  -->
+                        <li>
+                            <a href="messages.php"><i class="fa fa-commenting-o fa-fw"></i> Messages</a>
+                        </li>
+                        <li>
+                            <a href="announcement.php"><i class="fa fa-bullhorn fa-fw"></i> Announcements</a>
+                        </li>
+                        <li>
+                            <a href="announcement.php"><i class="fa fa-bell-o fa-fw"></i> Notices</a>
+                        </li>
+                        
+                        <!-- /ums --> 
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -279,15 +291,14 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+
                         <li>
                             <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
                         </li>
                         <li>
                             <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
-                        <li>
-                            <a href="messages.php"><i class="fa fa-commenting-o fa-fw"></i> Messages</a>
-                        </li>
+
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -407,11 +418,11 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-tasks fa-5x"></i>
+                                    <i class="fa fa-bullhorn fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">12</div>
-                                    <div>New Tasks!</div>
+                                    <div>Announcement</div>
                                 </div>
                             </div>
                         </div>
@@ -429,11 +440,11 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                    <i class="fa fa-bell-o fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">124</div>
-                                    <div>New Orders!</div>
+                                    <div>Notices</div>
                                 </div>
                             </div>
                         </div>

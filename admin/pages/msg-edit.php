@@ -294,8 +294,20 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
+                        <!-- ums  -->
+                        <li>
+                            <a href="messages.php"><i class="fa fa-commenting-o fa-fw"></i> Messages</a>
+                        </li>
+                        <li>
+                            <a href="announcement.php"><i class="fa fa-bullhorn fa-fw"></i> Announcements</a>
+                        </li>
+                        <li>
+                            <a href="announcement.php"><i class="fa fa-bell-o fa-fw"></i> Notices</a>
+                        </li>
+                        
+                        <!-- /ums --> 
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">

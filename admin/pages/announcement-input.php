@@ -1,6 +1,5 @@
 <?php 
     require_once('config.php');
-    $id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,15 +9,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>USB Adminil Panel</title>
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- MetisMenu CSS -->
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 <body>
     <div id="wrapper">
@@ -31,7 +43,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">UMS Admin Panel</a>
+                <a class="navbar-brand" href="index.php">UMS Admin Panel</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -270,7 +282,7 @@
                             <a href="announcement.php"><i class="fa fa-bullhorn fa-fw"></i> Announcements</a>
                         </li>
                         <li>
-                            <a href="announcement.php"><i class="fa fa-bell-o fa-fw"></i> Notices</a>
+                            <a href="#"><i class="fa fa-bell-o fa-fw"></i> Notices</a>
                         </li>
                         
                         <!-- /ums --> 
@@ -368,35 +380,15 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Messages</h1>
 
-                     <div class="table-responsive">
-                        <table class="table">
-                            <tbody>
-                            <?php
-                                $slt ="SELECT * FROM comments WHERE com_id='$id'";
-                                $qre = mysqli_query($DBC, $slt);
-                                $data=mysqli_fetch_array($qre);
-                             ?>
-                                <tr>
-                                    <td>Name:</td>
-                                    <td><?= $data['com_name']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Email:</td>
-                                    <td><?= $data['com_email']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Subject:</td>
-                                    <td><?= $data['com_subject']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Message:</td>
-                                    <td><?= $data['com_message']; ?></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <h1 class="page-header">Add Announcement</h1>
+                    <form action="announcement-insert.php" method="post">
+                        <div class="form-group">
+                            <label for="name">Announcement</label>
+                            <textarea name="announcement" id="" cols="30" rows="10"  class="form-control" placeholder="Type Announcement Here"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Send</button>
+                    </form>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

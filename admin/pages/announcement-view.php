@@ -1,6 +1,6 @@
 <?php 
     require_once('config.php');
-    $id = $_GET['id'];
+    $id = $_GET['aid'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -262,18 +262,6 @@
                         <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
-                        <!-- ums  -->
-                        <li>
-                            <a href="messages.php"><i class="fa fa-commenting-o fa-fw"></i> Messages</a>
-                        </li>
-                        <li>
-                            <a href="announcement.php"><i class="fa fa-bullhorn fa-fw"></i> Announcements</a>
-                        </li>
-                        <li>
-                            <a href="announcement.php"><i class="fa fa-bell-o fa-fw"></i> Notices</a>
-                        </li>
-                        
-                        <!-- /ums --> 
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -368,31 +356,19 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Messages</h1>
+                    <h1 class="page-header">Announcement</h1>
 
                      <div class="table-responsive">
                         <table class="table">
                             <tbody>
                             <?php
-                                $slt ="SELECT * FROM comments WHERE com_id='$id'";
+                                $slt ="SELECT * FROM announcement WHERE id='$id'";
                                 $qre = mysqli_query($DBC, $slt);
                                 $data=mysqli_fetch_array($qre);
                              ?>
                                 <tr>
-                                    <td>Name:</td>
-                                    <td><?= $data['com_name']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Email:</td>
-                                    <td><?= $data['com_email']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Subject:</td>
-                                    <td><?= $data['com_subject']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Message:</td>
-                                    <td><?= $data['com_message']; ?></td>
+                                    <td>Announcement:</td>
+                                    <td><?= $data['announcements']; ?></td>
                                 </tr>
                             </tbody>
                         </table>

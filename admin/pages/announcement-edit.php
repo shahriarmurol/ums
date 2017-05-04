@@ -1,6 +1,25 @@
-<?php 
+<?php
     require_once('config.php');
-    $id = $_GET['id'];
+    $id = $_GET['auid'];
+    $slt ="SELECT * FROM announcement WHERE id='$id'";
+    $qre = mysqli_query($DBC, $slt);
+    $data=mysqli_fetch_array($qre);
+
+    if(isset($_POST['announcement_update'])){
+        $announcement = $_POST['announcement'];
+
+        if(!empty($announcement)){
+            $update = "UPDATE announcement SET announcements='$announcement' WHERE id='$id' ";
+            $update_query = mysqli_query($DBC, $update);
+            if($update_query){
+                header('Location: announcement.php');
+            }else{
+                echo "Update Error!";
+            }
+        }else{
+            echo "Input Field Must not be Empty";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>USB Adminil Panel</title>
+    <title>USB Admin Theme</title>
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
@@ -31,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">UMS Admin Panel</a>
+                <a class="navbar-brand" href="index.php">UMS Admin Panel</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -262,18 +281,6 @@
                         <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
-                        <!-- ums  -->
-                        <li>
-                            <a href="messages.php"><i class="fa fa-commenting-o fa-fw"></i> Messages</a>
-                        </li>
-                        <li>
-                            <a href="announcement.php"><i class="fa fa-bullhorn fa-fw"></i> Announcements</a>
-                        </li>
-                        <li>
-                            <a href="announcement.php"><i class="fa fa-bell-o fa-fw"></i> Notices</a>
-                        </li>
-                        
-                        <!-- /ums --> 
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -291,6 +298,9 @@
                         </li>
                         <li>
                             <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                        </li>
+                        <li>
+                            <a href="messages.php"><i class="fa fa-commenting-o fa-fw"></i> Messages</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
@@ -368,35 +378,19 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Messages</h1>
-
-                     <div class="table-responsive">
-                        <table class="table">
-                            <tbody>
-                            <?php
-                                $slt ="SELECT * FROM comments WHERE com_id='$id'";
-                                $qre = mysqli_query($DBC, $slt);
-                                $data=mysqli_fetch_array($qre);
-                             ?>
-                                <tr>
-                                    <td>Name:</td>
-                                    <td><?= $data['com_name']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Email:</td>
-                                    <td><?= $data['com_email']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Subject:</td>
-                                    <td><?= $data['com_subject']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Message:</td>
-                                    <td><?= $data['com_message']; ?></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <h1 class="page-header">Edit Announcement</h1>
+                    <?php 
+                          // $slt ="SELECT * FROM comments WHERE com_id='$id'";
+                          // $qre = mysqli_query($DBC, $slt);
+                          // $data=mysqli_fetch_array($qre);
+                    ?>
+                    <form action="" method="post">
+                       <div class="form-group">
+                            <label for="announcement">Announcement</label>
+                            <textarea name="announcement" id="announcement" cols="30" rows="10"  class="form-control" placeholder="Type Announcement Here"> <?= $data['announcements']; ?> </textarea>
+                        </div>
+                        <input type="submit" name="announcement_update" value="Update" class="btn btn-success" />
+                    </form>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
