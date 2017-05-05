@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2017 at 08:48 PM
+-- Generation Time: May 05, 2017 at 07:42 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -55,7 +55,7 @@ CREATE TABLE `announcement` (
 --
 
 INSERT INTO `announcement` (`id`, `announcements`) VALUES
-(1, '1 jQuery marquee is the best marquee plugin in the world'),
+(1, ' 1 jQuery marquee is the best marquee plugin in the world 7'),
 (2, '2 jQuery marquee is the best marquee plugin in the world'),
 (3, '3 jQuery marquee is the best marquee plugin in the world'),
 (4, '4 jQuery marquee is the best marquee plugin in the world'),
@@ -80,7 +80,8 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`com_id`, `com_name`, `com_email`, `com_subject`, `com_message`) VALUES
-(0, 'abc7', 'abc7@gmail.com', 'abc7', '                                                                                                                                abc text7                                                                                                               ');
+(1, 'shahriar', 'shahriarmurolcse@gmail.com', 'hello ', 'test message'),
+(2, 'salpin', 'shahriarmurol@gmail.com', 'hello ', 'test text');
 
 -- --------------------------------------------------------
 
@@ -111,17 +112,16 @@ INSERT INTO `gradute_sub_names` (`id`, `sub_name`) VALUES
 
 CREATE TABLE `notices` (
   `id` int(11) NOT NULL,
-  `notice` text NOT NULL
+  `notice` text NOT NULL,
+  `notice_file` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `notices`
 --
 
-INSERT INTO `notices` (`id`, `notice`) VALUES
-(1, '1 Lorem ipsum is a placeholder text (filler text) in publishing and graphic design. It is used to demonstrate the graphics elements of a document, such as font, typography, and layout. ... Lorem ipsum dolor sit amet, consectetur adipisicing elit,'),
-(2, '2 Lorem ipsum is a placeholder text (filler text) in publishing and graphic design. It is used to demonstrate the graphics elements of a document, such as font, typography, and layout. ... Lorem ipsum dolor sit amet, consectetur adipisicing elit,'),
-(3, '৩ আমার সোনার বাংলা আমি তোমায় ভালোবাস\nআমার সোনার বাংলা আমি তোমায় ভালোবাস\nআমার সোনার বাংলা আমি তোমায় ভালোবাস\nআমার সোনার বাংলা আমি তোমায় ভালোবাস');
+INSERT INTO `notices` (`id`, `notice`, `notice_file`) VALUES
+(1, 'শব-ই-মেরাজ উপলক্ষে কলেজ ক্যাম্পাস বন্ধ থাকবে', 'Notice-1493961154-71585.pdf');
 
 -- --------------------------------------------------------
 
@@ -204,7 +204,7 @@ ALTER TABLE `announcement`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `com_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `com_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `gradute_sub_names`
 --
@@ -214,7 +214,7 @@ ALTER TABLE `gradute_sub_names`
 -- AUTO_INCREMENT for table `notices`
 --
 ALTER TABLE `notices`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `undergradute_sub_names`
 --
