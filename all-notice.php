@@ -12,10 +12,11 @@
 					$id = $_REQUEST['id'];
 					$slt = "SELECT * FROM notices WHERE id='$id' ";
 						$qre = mysqli_query($DBC,$slt);
-						while($data=mysqli_fetch_array($qre)){ ?>
-								<p>Heading : <?= $data['notice']; ?></p>
-								<object data="notices/<?= $data['notice_file']; ?>" type="application/pdf" width="100%" height="100%">
-								</object>
+						while($data=mysqli_fetch_array($qre)){ 
+							?>
+								<p>Notice : <?= $data['notice']; ?></p>
+								<object data='notices/<?= $data['notice_file']; ?>' type='application/pdf' width='100%' height='auto'></object>
+								<br/>
 								<a href="notices/<?= $data['notice_file']; ?>">Download</a>
 						<?php	}
 				?>

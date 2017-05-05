@@ -3,7 +3,7 @@
     //notice
     if(isset($_POST['addNotice'])){
       $notice_text= $_POST['notice'];
-      $notice_file= $_FILES['notice-file'];
+      $notice_file= $_FILES['noticeFile'];
       $notice_file_name ='Notice-'.time().'-'.rand(1000,100000).'.'.pathinfo($notice_file['name'],PATHINFO_EXTENSION);
       //mysql query
       if(!empty($notice_text)){
@@ -11,7 +11,7 @@
         $insert_query=mysqli_query($DBC, $insert); //insert query
         //innser if else or nested if else
         if($insert_query){
-            move_uploaded_file($notice_file['tmp_name'],'notices/'.$notice_file_name);
+            move_uploaded_file($notice_file['tmp_name'],'../../notices/'.$notice_file_name);
             echo "Data has ben Inserted Successfullt";
             header("Location: notices.php");
         }else{
@@ -410,7 +410,7 @@
                         </div>
                         <div class="form-group">
                             <label for="file">File(PDF/DOC)</label>
-                           <input type="file" name="notice-file" id="file" />
+                           <input type="file" name="noticeFile" id="file" />
                         </div>
                         <button type="submit" name="addNotice" class="btn btn-success">Send</button>
                     </form>
