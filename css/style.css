@@ -477,10 +477,11 @@ body {
 /* ================ develoepr team style =============*/
 .developer {
   color: #22D18D;
-  padding-left: 5px; }
+  padding-left: 5px;
+  font-style: normal !important; }
 
 .developer:hover {
-  font-style: italic;
+  font-style: normal;
   color: #22D18D; }
 
 /* ========================= about page style ================================== */

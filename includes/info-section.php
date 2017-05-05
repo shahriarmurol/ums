@@ -65,7 +65,7 @@
 <!-- notice and mangenent and student info section -->
 <!-- 	<section class="notice-manage-stdinfo section-padding box"> -->
 		<p class="empty" style="margin-bottom: 30px;"></p>
-		<div class="container">
+		<div class="container" style="display: none;">
 			<div class="row">
 				<!-- management  -->
 				<div class="col-md-4">
@@ -118,6 +118,7 @@
 						<a class="btn btn-block btn-success" style="padding: 8px;" href="online-admission.php">Apply Now</a>
 					</div>
 				</div>
+
 				<!-- /notice board -->
 			</div>
 		</div>

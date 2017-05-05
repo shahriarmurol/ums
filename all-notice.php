@@ -14,10 +14,13 @@
 						$qre = mysqli_query($DBC,$slt);
 						while($data=mysqli_fetch_array($qre)){ 
 							?>
-								<p>Notice : <?= $data['notice']; ?></p>
+								<p><strong>Notice :</strong> <?= $data['notice']; ?></p>
+								<p><strong>Date: </strong><?php date_default_timezone_set('Asia/Dhaka'); echo date('d-M-Y h:i:s A');?></p>
 							 <embed width="100%" height="600" src="notices/<?= $data['notice_file']; ?>"> 
 								<br/>
-								<a href="notices/<?= $data['notice_file']; ?>">Download</a>
+								 <div class="text-center">
+								<a style="margin-top: 30px;" class="btn btn-lg btn-success" href="notices/<?= $data['notice_file']; ?>">Download</a>
+								</div>
 						<?php	}
 				?>
 			</div>

@@ -329,10 +329,11 @@ padding: 0 auto !important;
 .developer{
 	color: $theme-color;
 	padding-left: 5px;
+	font-style: normal !important; 
 }
-.developer:hover{
-	font-style: italic;
-	color: $theme-color;
+.developer:hover {
+    font-style: normal;
+    color: #22D18D;
 }
 /* ========================= about page style ================================== */
  .map_canvas{

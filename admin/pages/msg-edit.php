@@ -34,25 +34,14 @@
     <meta name="author" content="">
 
     <title>USB Admin Theme</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- MetisMenu CSS -->
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
     <div id="wrapper">
@@ -426,9 +415,7 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea name="msg_message" id="msg_message" rows="5" class="form-control" placeholder="Type your Messages here.." required="1">
-                                <?= $data['com_message']; ?>
-                            </textarea>
+                            <textarea name="msg_message" id="msg_message" rows="5" class="form-control" placeholder="Type your Messages here.." required="1"><?= $data['com_message']; ?></textarea>
                         </div>
                         <input type="submit" name="msg_update" value="Update" class="btn btn-success" />
                     </form>

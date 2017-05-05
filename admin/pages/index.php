@@ -265,7 +265,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <!-- ums  -->
                         <li>
@@ -394,10 +394,16 @@
                                             require_once('config.php');
                                             $slt = "SELECT * FROM comments";
                                             $qre = mysqli_query($DBC,$slt);
-                                            $data=mysqli_fetch_array($qre);
-                                            $msg = count($data);
-                                            $msg+=1;
-                                            echo "$msg";
+                                            $cdata=mysqli_fetch_array($qre);
+                                            
+                                            $msg = count($cdata);
+                                            if($msg == 0){
+                                                echo $msg;
+                                            }else{
+                                                $msg=0;
+                                                $msg+=1;
+                                                echo $msg;
+                                            }
                                         ?>
                                     </div>
                                     <div>New Comments!</div>
@@ -426,10 +432,15 @@
                                             require_once('config.php');
                                             $slt = "SELECT * FROM announcement";
                                             $qre = mysqli_query($DBC,$slt);
-                                            $data=mysqli_fetch_array($qre);
-                                            $msg = count($data);
-                                            $msg+=1;
-                                            echo "$msg";
+                                            $adata=mysqli_fetch_array($qre);
+                                            
+                                            $msg = count($adata);
+                                            if($msg == 0){
+                                                echo $msg;
+                                            }else{
+                                                $msg+=1;
+                                                echo $msg;
+                                            }
                                         ?>
                                     </div>
                                     <div>Announcement</div>
@@ -458,8 +469,8 @@
                                             require_once('config.php');
                                             $slt = "SELECT * FROM notices";
                                             $qre = mysqli_query($DBC,$slt);
-                                            $data=mysqli_fetch_array($qre);
-                                            $msg = count($data);
+                                            $ndata=mysqli_fetch_array($qre);
+                                            $msg = count($ndata);
                                             $msg+=1;
                                             echo "$msg";
                                         ?>

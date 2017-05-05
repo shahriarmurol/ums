@@ -94,10 +94,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
-					<p>2017-2017 &copy; Institute Management System. All Right Reserved.</p>
+					<p>2017-2017 &copy; University Management System. All Right Reserved.</p>
 				</div>
 				<div class="col-md-4">
-					<strong>Developed by </strong><a class="developer" href="#">SIMT- CMT Batch-2013-2014</a>
+					<strong>Developed by </strong><a class="developer" href="http://shahriarmurol.tk/" target="_blank">SIMT- CMT Batch-2013-2014</a>
 				</div>
 			</div>
 		</div>
@@ -119,6 +119,7 @@
 <script src="js/jquery.bxslider.min.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/custom.js"></script> <!-- js call -->
+<script src="js/smoth-scroll.js"></script> <!-- js call -->
 <!-- / All javaScript -->
 <!-- google map -->
 <script>
