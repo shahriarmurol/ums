@@ -45,11 +45,12 @@
 					</div>
 					<div class="marquee notice-marquee" data-direction='up' data-duration='10000' data-pauseOnHover="true">
 					<?php 
-						$slt = "SELECT * FROM notices ORDER BY id DESC";
+						$slt = "SELECT * FROM notices";
 						$qre = mysqli_query($DBC,$slt);
 						while($data=mysqli_fetch_array($qre)){ ?>
 							<a href="all-notice.php?id=<?= $data['id']; ?>">
 								<p><?= $data['notice']; ?></p>
+								<p><?php date_default_timezone_set('Asia/Dhaka'); echo date('d-M-Y H:i:s A'); ?></p>
 							</a>
 						<?php	}
 					?>

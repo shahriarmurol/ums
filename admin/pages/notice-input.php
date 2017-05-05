@@ -4,9 +4,9 @@
     if(isset($_POST['addNotice'])){
       $notice_text= $_POST['notice'];
       $notice_file= $_FILES['notice-file'];
-      $notice_file_name ='Notice-'.time().'-'.rand(1000,100000).'.'.pathinfo($notice_file['name'],PATHINFO_EXTENS);
+      $notice_file_name ='Notice-'.time().'-'.rand(1000,100000).'.'.pathinfo($notice_file['name'],PATHINFO_EXTENSION);
       //mysql query
-      if(!empty($notice_text AND $notice_file)){
+      if(!empty($notice_text)){
         $insert ="INSERT INTO notices(notice, notice_file) VALUES('$notice_text','$notice_file_name')";
         $insert_query=mysqli_query($DBC, $insert); //insert query
         //innser if else or nested if else
