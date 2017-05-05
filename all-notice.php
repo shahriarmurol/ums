@@ -15,7 +15,7 @@
 						while($data=mysqli_fetch_array($qre)){ 
 							?>
 								<p>Notice : <?= $data['notice']; ?></p>
-								<object data='notices/<?= $data['notice_file']; ?>' type='application/pdf' width='100%' height='auto'></object>
+							 <embed width="100%" height="600" src="notices/<?= $data['notice_file']; ?>"> 
 								<br/>
 								<a href="notices/<?= $data['notice_file']; ?>">Download</a>
 						<?php	}

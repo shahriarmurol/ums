@@ -112,6 +112,10 @@ body{
 .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev,.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
 	display: none;
 }
+.carousel {
+margin-bottom: 0;
+padding: 0 auto !important;
+}
 /* ================= Announcement ===============*/
 .announcement{
 	background: #fff none repeat scroll 0 0;
@@ -198,15 +202,27 @@ body{
 .marquee {
   padding: 15px;
   overflow: hidden;
-  border: 1px solid #ccc;
-  background:$theme-color;
+  /*border: 1px solid #ccc;*/
+/*  background:$theme-color;*/
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   display: inline-block;
-  box-shadow:5px 5px 5px #ddd;
+ /* box-shadow:5px 5px 5px #ddd;
   -webkit-box-shadow:5px 5px 5px #ddd;
-  -moz-box-shadow:5px 5px 5px #ddd;
+  -moz-box-shadow:5px 5px 5px #ddd;*/
+}
+.marquee a {
+	width: 100%;
+	display: inline-block;
+	background: $theme-color;
+	padding: 30px;
+	border-radius: 3px;
+	margin-bottom:15px;
+	transition: .1s;
+}
+.marquee a:hover{
+	background: darken($theme-color,5%);
 }
 .marquee a p{
 	color: #fff;

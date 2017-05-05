@@ -7,9 +7,9 @@
 					<span>Announcement: </span>
 				</div>
 				<div class="latest-news-right">
-					<div class="marquee announcement_inner" data-direction='up' data-duration='2000' data-pauseOnHover="true">
+					<div class="marquee announcement_inner" data-direction='up' data-duration='3000' data-pauseOnHover="true">
 					<?php 
-						$slt = "SELECT * FROM announcement ORDER BY id DESC";
+						$slt = "SELECT * FROM announcement";
 						$qre = mysqli_query($DBC,$slt);
 						while($data=mysqli_fetch_array($qre)){ ?>
 							<a href="#">

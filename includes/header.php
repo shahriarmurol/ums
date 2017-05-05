@@ -13,6 +13,7 @@
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet"> 
 	 <!-- All CSS  -->
+	 <link rel="stylesheet" href="css/animate.css"> <!-- animate css -->
 	 <link rel="stylesheet" href="css/bootstrap-theme.min.css"> <!-- bootstrap theme css -->
 	 <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- bootstrp css -->
 	 <link rel="stylesheet" href="css/font-awesome.min.css"> <!-- font-awesome css  -->
@@ -24,26 +25,31 @@
 	 <link rel="stylesheet" href="css/nav.css"> <!-- Main style -->
 	 <!-- /CSS  -->
 	 <style>
-	 	.announcement_inner{
-		 	height: 30px;
-		 	padding: 8px;
-		 	width: 100%;
-		    overflow: hidden;
-		    border:none;
-		    background: #fff;
-		    border-radius: 5px;
-		    -webkit-border-radius: 5px;
-		    -moz-border-radius: 5px;
-		    display: inline-block;
+	 .marquee{
+		padding: 0;
+		padding: 0;
+	 }
+	 	.announcement.marquee {
+			border: none;
 		    box-shadow: none;
 		}
-		.announcement_inner a p{
+		.announcement_inner{
+			height: 30px;
+			background: #fff !important;
 			color: #333;
-			font-weight: 700;
-	 	}
-	 	.carousel {
-		    margin-bottom: 0;
-		    padding: 0 auto !important;
+			border: none !important;
+			box-shadow: none !important;
+		}
+		.announcement_inner a p {
+			color: #333 !important;
+			line-height: 40px;
+			padding: 8px;
+		}
+		.marquee.announcement_inner a {
+			display: block;
+			background: #fff;
+			border-radius: 3px;
+			padding: 8px;
 		}
 	 </style>
 </head>

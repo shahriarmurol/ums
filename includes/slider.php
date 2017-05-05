@@ -17,27 +17,27 @@
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
 				    <div class="item active">
-				      <img src="images/slides/slides-1.jpg" alt="first slides">
+				      <img class="animated pluse" src="images/slides/slides-1.jpg" alt="first slides">
 				      <div class="carousel-caption">
 				      </div>
 				    </div>
 				    <div class="item">
-				      <img src="images/slides/slides-2.jpg" alt="second slides">
+				      <img class="animated pluse" src="images/slides/slides-2.jpg" alt="second slides">
 				      <div class="carousel-caption">
 				      </div>
 				    </div>
 				    <div class="item">
-				      <img src="images/slides/slides-3.jpg" alt="second slides">
+				      <img class="animated pluse" src="images/slides/slides-3.jpg" alt="second slides">
 				      <div class="carousel-caption">
 				      </div>
 				    </div>
 				    <div class="item">
-				      <img src="images/slides/slides-4.jpg" alt="second slides">
+				      <img class="animated pluse" src="images/slides/slides-4.jpg" alt="second slides">
 				      <div class="carousel-caption">
 				      </div>
 				    </div>
 				    <div class="item">
-				      <img src="images/slides/slides-8.jpg" alt="second slides">
+				      <img class="animated pluse" src="images/slides/slides-8.jpg" alt="second slides">
 				      <div class="carousel-caption">
 				      </div>
 				    </div>
