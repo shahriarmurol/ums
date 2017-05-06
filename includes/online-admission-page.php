@@ -116,7 +116,7 @@
 								</div>
 								<div class="form-group">
 									<label for="point">GPA<span style="color: red"> *</span></label>
-									<input type="text" class="form-control" name="point" id="point" placeholder="Minimum GPA = 2.5" />
+									<input type="text" class="form-control" min="2.5" max="5" name="point" id="point" placeholder="Minimum GPA = 2.5" />
 								</div>
 								<!-- bangk info -->
 								<h2 class="text-center">Bank Information</h2>

@@ -76,10 +76,11 @@
 							<li><a href="#"><i class="fa fa-rss fa-2x"></i></a></li>
 						</ul>
 					</div>
-					<div class="header-search mr15px">
+					<div class="header-search mr15px" style="display: none;">
+						<!-- search -->
 						<form action="" method="post">
 							<div class="form-group">
-								<input type="text" name="top_search" class="form-control search-btn-field" placeholder="Search.." />
+								<input type="text" name="search" class="form-control search-btn-field" placeholder="Search.." />
 								<i class="search-icon fa fa-search" aria-hidden="true"></i>
 							</div>
 						</form>
