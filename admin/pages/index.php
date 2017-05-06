@@ -277,6 +277,9 @@
                         <li>
                             <a href="notices.php"><i class="fa fa-bell-o fa-fw"></i> Notices</a>
                         </li>
+                        <li>
+                            <a href="std_regi_info.php"><i class="fa fa-graduation-cap fa-fw"></i> Student Registration Info</a>
+                        </li>
                         
                         <!-- /ums --> 
                         <li>

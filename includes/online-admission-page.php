@@ -11,7 +11,7 @@
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3">
 						<!-- student registration form -->
-							<form action="" method="post" enctype="multipart/form-data">
+							<form action="student_info_process.php" method="post" enctype="multipart/form-data">
 							<h2 class="text-center">Personal Information</h2>
 								<div class="from-group">
 									<label for="sub">Application For Admission in <span style="color: red"> *</span></label>
@@ -56,8 +56,8 @@
 								<!-- academics -->
 								<h2 class="text-center">Academic records</h2>
 								<div class="from-group">
-									<label for="ssc">Name of Exam <span style="color: red"> *</span></label>
-									<select class="form-control" id="ssc" name="ssc">
+									<label for="exam">Name of Exam <span style="color: red"> *</span></label>
+									<select class="form-control" id="exam" name="exam">
 									  <option value="" selected>Select Name of Exam</option>
 									  <option value="Dakhil">Dakhil</option>
 									  <option value="SSC">SSC</option>
@@ -91,7 +91,7 @@
 								</div>
 								<div class="from-group">
 									<label for="sub">Year of Passing <span style="color: red"> *</span></label>
-									<select class="form-control" id="sub">
+									<select class="form-control" name="year" id="sub">
 									  <option value="" selected>Select Passing Year</option>
 									  <option value="2015">2015</option>
 									  <option value="2016">2016</option>
@@ -123,12 +123,10 @@
 								<p>AB Bank Limited</p>
 								<p>Account No. 4022-792721-000</p>
 								<p>Shewrapara, Branch.</p>
-									
 								<div class="form-group">
 									<label for="money">Amount <span style="color: red"> *</span></label>
 									<input type="text" name="money" id="money" class="form-control"/>
 								</div>
-									
 								<div class="form-group">
 									<label for="slipNo">Deposit Slip No <span style="color: red"> *</span></label>
 									<input type="text" name="slipNo" id="slipNo" class="form-control"/>
@@ -136,6 +134,9 @@
 								<div class="form-group">
 									<label for="paymentDate">Date of Payment <span style="color: red"> *</span></label>
 									<input type="date" name="paymentDate" id="paymentDate" class="form-control"/>
+								</div>
+								<div class="text-center">
+									<input type="submit" name="stdRegiForm" value="submit" class="btn btn-lg btn-success">	
 								</div>
 							</form> <!-- end of the student regi form -->
 						</div>
