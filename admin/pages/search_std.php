@@ -1,5 +1,6 @@
-<?php session_start();
+<?php 
     require_once('config.php');
+   // $id = $_GET['stdvid'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,28 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
-
+    <title>USB Adminil Panel</title>
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- MetisMenu CSS -->
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 <body>
     <div id="wrapper">
@@ -43,7 +31,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">UMS Admin Panel</a>
+                <a class="navbar-brand" href="index.html">UMS Admin Panel</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -243,12 +231,12 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> <?= $_SESSION['user']; ?></a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -274,18 +262,6 @@
                         <li>
                             <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
-                        <!-- ums  -->
-                        <li>
-                            <a href="messages.php"><i class="fa fa-commenting-o fa-fw"></i> Messages</a>
-                        </li>
-                        <li>
-                            <a href="announcement.php"><i class="fa fa-bullhorn fa-fw"></i> Announcements</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bell-o fa-fw"></i> Notices</a>
-                        </li>
-                        
-                        <!-- /ums --> 
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -379,55 +355,92 @@
  <!-- content goes here -->
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Student Registration Information 
-                        <span class="pull-right">
-                            <form action="search_std.php" method="post">
-                                <div class="form-group">
-                                 <!--    <label for="search">Search by Roll</label> -->
-                                 <input type="text" name="search" class="form-control" placeholder="search by Name or Roll">
-                                </div>
-                            </form>
-                        </span>
-                    </h1>
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="page-header">Student Registration Info</h1>
 
                      <div class="table-responsive">
-                        <table class="table table-bordered table-hover table-striped">
-                            <thead>
-                                <tr>
-                                    <th>SL</th>
-                                    <th>Name</th>
-                                    <th>Exam</th>
-                                    <th>Board</th>
-                                    <th>Group</th>
-                                    <th>GPA</th>
-                                    <th>Passing Year</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
+                        <table class="table table-striped table-hover">
                             <tbody>
-                            <?php 
-                                $srl=1;
-                                $dbdata = "SELECT * FROM std_regi_info ORDER BY gpa DESC";
-                                $qre = mysqli_query($DBC, $dbdata);
-                                while($info=mysqli_fetch_array($qre)){ ?>
-                                    <tr>
-                                        <td><?= $srl++; ?></td>
-                                        <td><?= $info['std_name']; ?></td>
-                                        <td><?= $info['exam']; ?></td>
-                                        <td><?= $info['board']; ?></td>
-                                        <td><?= $info['study_group']; ?></td>
-                                        <td><?= $info['gpa']; ?></td>
-                                        <td><?= $info['passing_year']; ?></td>
-                                        <td>
-                                             <a class="action-btn" href="std_info_view.php?stdvid=<?= $info['std_id']; ?>"><i class="fa fa-2x  fa-eye"></i></a> 
-                                            <!-- <a class="action-btn" href="notice-edit.php?nuid=<?= $info['std_id']; ?>"><i class="fa fa-2x fa-pencil-square-o"></i></a> -->
-                                            <a class="action-btn" href="std_regi_info_delete.php?stddid=<?= $info['std_id']; ?>"><i class="fa fa-2x fa-trash-o"></i></a>
-                                        </td>
-                                    </tr>
-
-                            <?php    }
-                            ?>
+                            <?php
+                                $search = $_POST['search']; 
+                                $slt ="SELECT * FROM std_regi_info WHERE std_name LIKE '$search' OR roll LIKE '$search' ";
+                                $qre = mysqli_query($DBC, $slt);
+                                $data=mysqli_fetch_array($qre);
+                             ?>
+                                <tr>
+                                    <td>Selected Subject:</td>
+                                    <td><?= $data['sub']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Student Name:</td>
+                                    <td><?= $data['std_name']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Father's Name:</td>
+                                    <td><?= $data['f_name']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Mother's Name:</td>
+                                    <td><?= $data['m_name']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Date of Birth:</td>
+                                    <td><?= $data['date_of_birth']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Address:</td>
+                                    <td><?= $data['address']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Phone No:</td>
+                                    <td><?= $data['phone']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Picture:</td>
+                                    <td>
+                                        <img width="200" src="../../students_picture/<?= $data['picture']; ?>" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Name of Exam:</td>
+                                    <td><?= $data['exam']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Group:</td>
+                                    <td><?= $data['study_group']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Board:</td>
+                                    <td><?= $data['board']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Year of Passing:</td>
+                                    <td><?= $data['passing_year']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Roll:</td>
+                                    <td><?= $data['roll']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Class/Division:</td>
+                                    <td><?= $data['class_div_grade']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>GPA:</td>
+                                    <td><?= $data['gpa']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Deposit Amount:</td>
+                                    <td><?= $data['ammount']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Deposit Slip No:</td>
+                                    <td><?= $data['slip_no']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Date of Payment:</td>
+                                    <td><?= $data['date_of_pay']; ?></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
