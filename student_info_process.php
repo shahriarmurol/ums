@@ -7,6 +7,7 @@
       $f_name = $_POST['f_name'];
       $m_name = $_POST['m_name'];
       $birthdate = $_POST['birthdate'];
+      $gender = $_POST['gender'];
       $address = $_POST['address'];
       $phone = $_POST['phone'];
    	  //picture
@@ -23,8 +24,8 @@
       $slipNo = $_POST['slipNo'];
       $paymentDate = $_POST['paymentDate'];
       //mysql query
-      if(!empty($sub AND $std_name AND $exam AND $std_group AND $board AND $year AND $roll AND $gpa AND $money AND $slipNo)){
-        $insert ="INSERT INTO std_regi_info(sub,std_name,f_name,m_name,date_of_birth,address,phone,picture,exam,study_group,board,passing_year,roll,class_div_grade,gpa,ammount,slip_no,date_of_pay) VALUES('$sub','$std_name','$f_name','$m_name','$birthdate','$address','$phone','$picture_name',' $exam','$std_group','$board','$year','$roll','$class','$gpa','$money','$slipNo','$paymentDate')";
+      if(!empty($sub AND $std_name AND $gender AND $exam AND $std_group AND $board AND $year AND $roll AND $gpa AND $money AND $slipNo)){
+        $insert ="INSERT INTO std_regi_info(sub,std_name,f_name,m_name,date_of_birth,gender,address,phone,picture,exam,study_group,board,passing_year,roll,class_div_grade,gpa,ammount,slip_no,date_of_pay) VALUES('$sub','$std_name','$f_name','$m_name','$birthdate','$gender','$address','$phone','$picture_name',' $exam','$std_group','$board','$year','$roll','$class','$gpa','$money','$slipNo','$paymentDate')";
         $insert_query=mysqli_query($DBC, $insert); //insert query
         //innser if else or nested if else
         if($insert_query){

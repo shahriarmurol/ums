@@ -23,6 +23,7 @@
 	 <link rel="stylesheet" href="css/jquery.bxslider.min.css"> <!-- bx slider -->
 	 <link rel="stylesheet" href="css/style.css"> <!-- Main style -->
 	 <link rel="stylesheet" href="css/nav.css"> <!-- Main style -->
+	 <link rel="stylesheet" href="css/responsive.css"> <!-- Main style -->
 	 <!-- /CSS  -->
 	 <style>
 	 .marquee{

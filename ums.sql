@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2017 at 05:45 PM
+-- Generation Time: May 08, 2017 at 07:19 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -80,7 +80,8 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`com_id`, `com_name`, `com_email`, `com_subject`, `com_message`) VALUES
-(2, 'hello', 'hello@gmail.com', 'test', 'test message');
+(2, 'hello', 'hello@gmail.com', 'test', 'test message'),
+(8, 'shahriar', 'shahriar@gmail.com', 'test message', 'asfdf');
 
 -- --------------------------------------------------------
 
@@ -139,6 +140,7 @@ CREATE TABLE `std_regi_info` (
   `f_name` varchar(48) NOT NULL,
   `m_name` varchar(48) NOT NULL,
   `date_of_birth` varchar(20) NOT NULL,
+  `gender` varchar(8) NOT NULL,
   `address` varchar(255) NOT NULL,
   `phone` varchar(35) NOT NULL,
   `picture` varchar(255) NOT NULL,
@@ -158,8 +160,9 @@ CREATE TABLE `std_regi_info` (
 -- Dumping data for table `std_regi_info`
 --
 
-INSERT INTO `std_regi_info` (`std_id`, `sub`, `std_name`, `f_name`, `m_name`, `date_of_birth`, `address`, `phone`, `picture`, `exam`, `study_group`, `board`, `passing_year`, `roll`, `class_div_grade`, `gpa`, `ammount`, `slip_no`, `date_of_pay`) VALUES
-(2, 'CSE', 'shahriar7', 'sirajul', 'parvin', '2017-01-01', 'dhaka', '01710835652', 'Stuent-1494081466-34330.jpg', ' SSC', 'Business Studie', 'Dhaka', '2016', '302566', 'A+', '5', '10000', '546468544', '2016-01-01');
+INSERT INTO `std_regi_info` (`std_id`, `sub`, `std_name`, `f_name`, `m_name`, `date_of_birth`, `gender`, `address`, `phone`, `picture`, `exam`, `study_group`, `board`, `passing_year`, `roll`, `class_div_grade`, `gpa`, `ammount`, `slip_no`, `date_of_pay`) VALUES
+(5, 'CSE', 'Shahriar Hosen', 'sirajul', 'parvin', '1993-01-01', 'male', 'Kishoreganj', '01710835651', 'Stuent-1494086396-23263.jpg', ' Dakhil', 'Science', 'Madrasah Board', '2015', '65654646', 'A', '4', '10000', '234165421', '2017-01-01'),
+(2, 'CSE', 'shahriar7', 'sirajul', 'parvin', '2017-01-01', 'male', 'dhaka', '01710835652', 'Stuent-1494081466-34330.jpg', ' SSC', 'Business Studie', 'Dhaka', '2016', '302566', 'A+', '5', '10000', '546468544', '2016-01-01');
 
 -- --------------------------------------------------------
 
@@ -251,7 +254,7 @@ ALTER TABLE `announcement`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `com_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `com_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `gradute_sub_names`
 --
@@ -266,7 +269,7 @@ ALTER TABLE `notices`
 -- AUTO_INCREMENT for table `std_regi_info`
 --
 ALTER TABLE `std_regi_info`
-  MODIFY `std_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `std_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `undergradute_sub_names`
 --

@@ -41,6 +41,14 @@
 									<label for="birthdate">Date of Birth <span style="color: red"> *</span></label>
 									<input type="date" name="birthdate" id="birthdate" class="form-control"/>
 								</div>
+								<div class="from-group">
+									<label for="gender">Gender <span style="color: red"> *</span></label>
+									<select class="form-control" id="gender" name="gender">
+									  <option value="" selected>Select your gender</option>
+									  <option value="Male">Male</option>
+									  <option value="Female">Female</option>
+									</select>
+								</div>
 								<div class="form-group">
 									<label for="maddress">Mailing Address <span style="color: red"> *</span></label>
 									<textarea name="address" id="address" class="form-control" rows="3"></textarea>

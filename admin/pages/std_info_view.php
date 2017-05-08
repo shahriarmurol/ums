@@ -387,6 +387,10 @@
                                     <td><?= $data['date_of_birth']; ?></td>
                                 </tr>
                                 <tr>
+                                    <td>Gender:</td>
+                                    <td><?= $data['gender']; ?></td>
+                                </tr>
+                                <tr>
                                     <td>Address:</td>
                                     <td><?= $data['address']; ?></td>
                                 </tr>
