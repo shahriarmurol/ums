@@ -15,7 +15,7 @@
 							<h2 class="text-center">Personal Information</h2>
 								<div class="from-group">
 									<label for="sub">Application For Admission in <span style="color: red"> *</span></label>
-									<select class="form-control" name="sub" id="sub">
+									<select class="form-control" name="sub" id="sub" required="1">
 										  <option value="" selected>Select Subject</option>
 										  <option value="CSE">CSE</option>
 										  <option value="EEE">EEE</option>
@@ -26,24 +26,24 @@
 								</div>
 								<div class="from-group">
 									<label for="name">Name<span style="color: red"> *</span></label>
-									<input type="text" name="std_name" id="name" class="form-control"/>
+									<input type="text" name="std_name" id="name" class="form-control" required="1" />
 								</div>
 									
 								<div class="form-group">
 									<label for="fname">Father's Name <span style="color: red"> *</span></label>
-									<input type="text" name="f_name" id="fname" class="form-control"/>
+									<input type="text" name="f_name" id="fname" class="form-control" required="1" />
 								</div>
 								<div class="form-group">
 									<label for="mname">Mother's Name <span style="color: red"> *</span></label>
-									<input type="text" name="m_name" id="mname" class="form-control"/>
+									<input type="text" name="m_name" id="mname" class="form-control" required="1" />
 								</div>
 								<div class="form-group">
 									<label for="birthdate">Date of Birth <span style="color: red"> *</span></label>
-									<input type="date" name="birthdate" id="birthdate" class="form-control"/>
+									<input type="date" name="birthdate" id="birthdate" class="form-control" required="1" />
 								</div>
 								<div class="from-group">
 									<label for="gender">Gender <span style="color: red"> *</span></label>
-									<select class="form-control" id="gender" name="gender">
+									<select class="form-control" id="gender" name="gender" required="1">
 									  <option value="" selected>Select your gender</option>
 									  <option value="Male">Male</option>
 									  <option value="Female">Female</option>
@@ -51,11 +51,11 @@
 								</div>
 								<div class="form-group">
 									<label for="maddress">Mailing Address <span style="color: red"> *</span></label>
-									<textarea name="address" id="address" class="form-control" rows="3"></textarea>
+									<textarea name="address" id="address" class="form-control" rows="3" required="1"></textarea>
 								</div>
 								<div class="form-group">
 									<label for="phone">Phone No <span style="color: red"> *</span></label>
-									<input type="text" maxlength="14" name="phone" id="phone" class="form-control"/>
+									<input type="number" maxlength="11" name="phone" id="phone" class="form-control" required="1" />
 								</div>
 								<div class="form-group">
 									<label for="picture">Picture <span style="color: red"> *</span></label>
@@ -65,7 +65,7 @@
 								<h2 class="text-center">Academic records</h2>
 								<div class="from-group">
 									<label for="exam">Name of Exam <span style="color: red"> *</span></label>
-									<select class="form-control" id="exam" name="exam">
+									<select class="form-control" id="exam" name="exam" required="1">
 									  <option value="" selected>Select Name of Exam</option>
 									  <option value="Dakhil">Dakhil</option>
 									  <option value="SSC">SSC</option>
@@ -74,7 +74,7 @@
 								</div>
 								<div class="form-group">
 									<label for="std_group">Group/Subject <span style="color: red"> *</span></label>
-									<select class="form-control" name="std_group" id="std_group" >
+									<select class="form-control" name="std_group" id="std_group" required="1">
 									  <option value="" selected>Select Group</option>
 									  <option value="Science">Science</option>
 									  <option value="Humanities">Humanities</option>
@@ -83,7 +83,7 @@
 								</div>
 								<div class="form-group">
 									<label for="board">Board/University <span style="color: red"> *</span></label>
-									<select class="form-control" name="board" id="board" >
+									<select class="form-control" name="board" id="board" required="1">
 									  <option value="" selected>Select Board</option>
 									  <option value="Dhaka">Dhaka</option>
 									  <option value="Barisal">Barisal</option>
@@ -99,8 +99,11 @@
 								</div>
 								<div class="from-group">
 									<label for="sub">Year of Passing <span style="color: red"> *</span></label>
-									<select class="form-control" name="year" id="sub">
+									<select class="form-control" name="year" id="sub" required="1">
 									  <option value="" selected>Select Passing Year</option>
+									  <option value="2012">2012</option>
+									  <option value="2013">2013</option>
+									  <option value="2014">2014</option>
 									  <option value="2015">2015</option>
 									  <option value="2016">2016</option>
 									  <option value="2007">2017</option>
@@ -108,7 +111,7 @@
 								</div>
 								<div class="form-group">
 									<label for="roll">Roll of Exam <span style="color: red"> *</span></label>
-									<input type="text" name="roll" id="roll" class="form-control"/>
+									<input type="number" name="roll" id="roll" class="form-control" required="1" />
 								</div>
 								<div class="form-group">
 									<label for="class">Class /Division/Grade <span style="color: red"> *</span></label>
@@ -124,7 +127,7 @@
 								</div>
 								<div class="form-group">
 									<label for="point">GPA<span style="color: red"> *</span></label>
-									<input type="text" class="form-control" min="2.5" max="5" name="point" id="point" placeholder="Minimum GPA = 2.5" />
+									<input type="number" class="form-control" min="2.5" max="5" name="point" id="point" placeholder="Minimum GPA = 2.5" required="1" />
 								</div>
 								<!-- bangk info -->
 								<h2 class="text-center">Bank Information</h2>
@@ -133,15 +136,15 @@
 								<p>Shewrapara, Branch.</p>
 								<div class="form-group">
 									<label for="money">Amount <span style="color: red"> *</span></label>
-									<input type="text" name="money" id="money" class="form-control"/>
+									<input type="number" name="money" id="money" class="form-control" required="1" />
 								</div>
 								<div class="form-group">
 									<label for="slipNo">Deposit Slip No <span style="color: red"> *</span></label>
-									<input type="text" name="slipNo" id="slipNo" class="form-control"/>
+									<input type="text" name="slipNo" id="slipNo" class="form-control" required="1" />
 								</div>
 								<div class="form-group">
 									<label for="paymentDate">Date of Payment <span style="color: red"> *</span></label>
-									<input type="date" name="paymentDate" id="paymentDate" class="form-control"/>
+									<input type="date" name="paymentDate" id="paymentDate" class="form-control" required="1" />
 								</div>
 								<div class="text-center">
 									<input type="submit" name="stdRegiForm" value="submit" class="btn btn-lg btn-success">	

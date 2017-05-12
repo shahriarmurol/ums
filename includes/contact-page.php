@@ -1,3 +1,11 @@
+<style>
+	.err{
+		color: red;
+		margin-top: 8px;
+		margin-left: 15px;
+		font-weight: 700;
+	}
+</style>
 <!-- contact -->
 <div class="contact-section section-padding box">
 	<div class="container">
@@ -14,17 +22,16 @@
 						<li><i class="fa fa-envelope-o"></i> E-mail: info@bubt.edu.bd , bubtinfo@gmail.com, admission@bubt.edu.bd</li>
 					</ul>
 				</div>
-
 				<div class="send-message">
 					<h2 class="text-center">Leave a Message</h2>
-					<form action="admin/pages/msg-insert.php" method="post">
+					<form action="admin/pages/msg-insert.php" method="POST">
 						<div class="form-group">
-							<label for="name">Name</label>
+							<label for="name">Name </label> 
 							<input type="text" name="msg_name" id="name" placeholder="Name" class="form-control" required="1" />
 						</div>
 						<div class="form-group">
 							<label for="email">Email</label>
-							<input type="text" name="msg_email" id="email" placeholder="Email Address" class="form-control" required="1" />
+							<input type="email" name="msg_email" id="email" placeholder="Email Address" class="form-control" required="1" />
 						</div>
 						<div class="form-group">
 							<label for="subject">Subject</label>
@@ -32,13 +39,14 @@
 						</div>
 						<div class="form-group">
 							<label for="message">Message</label>
-							<textarea name="msg_message" id="msg_message"  class="form-control" placeholder="Type your Messages here.." required></textarea>
+							<textarea name="msg_message" id="msg_message" rows="5"  class="form-control" placeholder="Type your Messages here.." required=""></textarea>
 						</div>
-						<button type="submit" class="btn btn-success">Send</button>
+						<div class="text-center">
+							<input type="submit" name="action" value="Send" class="btn btn-lg btn-success">
+						</div>
 					</form>
 				</div>
 
-				
 			</div>
 			<div class="col-md-6">
 				<div class="map">
