@@ -99,7 +99,7 @@
   margin-right: 15px; }
 
 /* Responsive */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .nav-icon-div {
     display: block; }
 
