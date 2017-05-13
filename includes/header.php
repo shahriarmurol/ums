@@ -70,10 +70,10 @@
 				<div class="col-sm-4 col-md-8">
 					<div class="header-contact pull-right mr15px">
 						<ul>
-							<li><a href="#"><i class="fa fa-envelope-o fa-2x"></i></a></li>
-							<li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
-							<li><a href="#"><i class="fa fa-youtube fa-2x"></i></a></li>
+							<li><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+							<li><a href="https://www.facebook.com/shahriarmuroldcse" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+							<li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+							<li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube fa-2x"></i></a></li>
 							<li><a href="#"><i class="fa fa-rss fa-2x"></i></a></li>
 						</ul>
 					</div>

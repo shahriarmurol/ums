@@ -48,7 +48,7 @@
 						$slt = "SELECT * FROM notices";
 						$qre = mysqli_query($DBC,$slt);
 						while($data=mysqli_fetch_array($qre)){ ?>
-							<a href="all-notice.php?id=<?= $data['id']; ?>">
+							<a href="single-notice.php?id=<?= $data['id']; ?>">
 								<p><?= $data['notice']; ?></p>
 								<p><?php date_default_timezone_set('Asia/Dhaka'); echo date('d-M-Y H:i:s A'); ?></p>
 							</a>
@@ -96,8 +96,9 @@
 
 				<div class="col-md-4">
 					<div class="title">
-						<h2>Student Info</h2>
+						<h2>Informations</h2>
 						<ul>
+							<li><a href="notices.php">All Notices</a></li>
 							<li><a href="#">Faculty Members</a></li>
 							<li><a href="#">Visiting Professors</a></li>
 							<li><a href="#">Coordination</a></li>

@@ -16,7 +16,7 @@
 							?>
 								<p><strong>Notice :</strong> <?= $data['notice']; ?></p>
 								<p><strong>Date: </strong><?php date_default_timezone_set('Asia/Dhaka'); echo date('d-M-Y h:i:s A');?></p>
-							 <embed width="100%" height="600" src="notices/<?= $data['notice_file']; ?>"> 
+							 <embed width="100%" height="500" src="notices/<?= $data['notice_file']; ?>"> 
 								<br/>
 								 <div class="text-center">
 								<a style="margin-top: 30px;" class="btn btn-lg btn-success" href="notices/<?= $data['notice_file']; ?>">Download</a>
