@@ -28,53 +28,32 @@
 			               <div class="single-person">
 		                			<div class="row">
 				                		<div class="col-md-6">
-						                	<h4>Name</h4>
-						                	<p>Occupation,UMS Trust</p>
-						                	<p>Office:21656565,36983656</p>		
+							                <h4>Name: Md. Sazzadul Hoq</h4>
+						                	<p>Designation: Head of The Computer Department</p>
+						                	<p>Education: M.Sc in Applied Physics, Electronics and Communication Engineering(IU), MBA in International Business(Coventry University, United Kingdom).</p>
+						                	<p>Offices: সাইক ইনস্টিটিউট অব ম্যানেজমেন্ট অ্যান্ড টেকনোলজি, ৯৬৫, পূর্ব শেওড়াপাড়া বাসস্ট্যান্ড, পূবালী ব্যাংক সংলগ্ন, মিরপুর, ঢাকা।</p>
+						                	<p>Email: vp.simt@gmail.com</p>			
 				                		</div>
 				                		<div class="col-md-6">
-				                			<img src="images/partnrs/principle.png" alt="">	
-				                		</div>
-		                			</div>
-		                	</div>
-			               <div class="single-person">
-		                			<div class="row">
-				                		<div class="col-md-6">
-						                	<h4>Name</h4>
-						                	<p>Occupation,UMS Trust</p>
-						                	<p>Office:21656565,36983656</p>		
-				                		</div>
-				                		<div class="col-md-6">
-				                			<img src="images/partnrs/principle.png" alt="">	
+				                			<img src="images/administration/sazzadul_hoq_vp.jpg" alt="">	
 				                		</div>
 		                			</div>
 		                	</div>
 			               <div class="single-person">
 		                			<div class="row">
 				                		<div class="col-md-6">
-						                	<h4>Name</h4>
-						                	<p>Occupation,UMS Trust</p>
-						                	<p>Office:21656565,36983656</p>		
+						                	<h4>Name: Amranul Hoque Khandaker</h4>
+						                	<p>Designation: Head of The Computer Department</p>
+						                	<p>Education: B. Sc in CSE</p>
+						                	<p>Offices: সাইক ইনস্টিটিউট অব ম্যানেজমেন্ট অ্যান্ড টেকনোলজি, ৯৬৫, পূর্ব শেওড়াপাড়া বাসস্ট্যান্ড, পূবালী ব্যাংক সংলগ্ন, মিরপুর, ঢাকা।</p>
+						                	<p>Email: amran@simt.edu.bd</p>		
 				                		</div>
 				                		<div class="col-md-6">
-				                			<img src="images/partnrs/principle.png" alt="">	
-				                		</div>
-		                			</div>
-		                	</div>
-			               <div class="single-person">
-		                			<div class="row">
-				                		<div class="col-md-6">
-						                	<h4>Name</h4>
-						                	<p>Occupation,UMS Trust</p>
-						                	<p>Office:21656565,36983656</p>		
-				                		</div>
-				                		<div class="col-md-6">
-				                			<img src="images/partnrs/principle.png" alt="">	
+				                			<img src="images/administration/Amranul-Hoque-1.jpg" alt="">	
 				                		</div>
 		                			</div>
 		                	</div>
 			            </div>
-
 			            <!-- vice chancellor -->
 			            <div class="tab-pane" id="Vice-Chancellor">
 				            <div class="single-person">

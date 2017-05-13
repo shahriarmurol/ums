@@ -127,7 +127,7 @@
 								</div>
 								<div class="form-group">
 									<label for="point">GPA<span style="color: red"> *</span></label>
-									<input type="number" class="form-control" min="2.5" max="5" name="point" id="point" placeholder="Minimum GPA = 2.5" required="1" />
+									<input type="number" class="form-control" name="point" id="point" placeholder="Minimum GPA = 2.5" required="1" />
 								</div>
 								<!-- bangk info -->
 								<h2 class="text-center">Bank Information</h2>
@@ -136,15 +136,15 @@
 								<p>Shewrapara, Branch.</p>
 								<div class="form-group">
 									<label for="money">Amount <span style="color: red"> *</span></label>
-									<input type="number" name="money" id="money" class="form-control" required="1" />
+									<input type="number" name="money" id="money" class="form-control" />
 								</div>
 								<div class="form-group">
 									<label for="slipNo">Deposit Slip No <span style="color: red"> *</span></label>
-									<input type="text" name="slipNo" id="slipNo" class="form-control" required="1" />
+									<input type="text" name="slipNo" id="slipNo" class="form-control"/>
 								</div>
 								<div class="form-group">
 									<label for="paymentDate">Date of Payment <span style="color: red"> *</span></label>
-									<input type="date" name="paymentDate" id="paymentDate" class="form-control" required="1" />
+									<input type="date" name="paymentDate" id="paymentDate" class="form-control"/>
 								</div>
 								<div class="text-center">
 									<input type="submit" name="stdRegiForm" value="submit" class="btn btn-lg btn-success">	

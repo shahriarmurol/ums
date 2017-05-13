@@ -10,10 +10,11 @@
 							<h4>About</h4>
 						</div>
 						<ul>
-							<li><a href="#"> About link</a></li>
-							<li><a href="#"> About link</a></li>
-							<li><a href="#"> About link</a></li>
-							<li><a href="#"> About link</a></li>
+							<li><a href="index.php">Main Campus</a></li>
+							<li><a href="index.php">Campus-2</a></li>
+							<li><a href="index.php">Campus-3</a></li>
+							<li><a href="index.php">Campus-4</a></li>
+							
 						</ul>
 					</div>
 				</div>
@@ -23,10 +24,10 @@
 							<h4>Academics</h4>
 						</div>
 						<ul>
-							<li><a href="#"> Academic link</a></li>
-							<li><a href="#"> Academic link</a></li>
-							<li><a href="#"> Academic link</a></li>
-							<li><a href="#"> Academic link</a></li>
+							<li><a href="index.php">UMS</a></li>
+							<li><a href="about.php"> About</a></li>
+							<li><a href="../admission.php"> Admission</a></li>
+							<li><a href="contact.php"> Contacts</a></li>
 						</ul>
 					</div>
 				</div>
@@ -36,10 +37,10 @@
 							<h4>Resources</h4>
 						</div>
 						<ul>
-							<li><a href="#"> Resources link</a></li>
-							<li><a href="#"> Resources link</a></li>
-							<li><a href="#"> Resources link</a></li>
-							<li><a href="#"> Resources link</a></li>
+							<li><a href="http://www.bteb.gov.bd/"> BTEB</a></li>
+							<li><a href="http://www.bangladesh.gov.bd/">Bangladesh Government</a></li>
+							<li><a href="http://uitrce-web.banbeis.gov.bd/">Ministry of Education</a></li>
+							<li><a href="http://uitrce-web.banbeis.gov.bd/">Ministry of Education</a></li>
 						</ul>
 					</div>
 				</div>
