@@ -77,7 +77,7 @@
 							<h4>Connect with Us</h4>
 						</div>
 						<ul>
-							<li><a href="#"><i class="fa fa-2x fa-facebook"></i></a></li>
+							<li><a href="https://www.facebook.com/shahriarhosencse"><i class="fa fa-2x fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-2x fa-twitter"></i></a></li>
 							<li><a href="#"><i class="fa fa-2x fa-youtube"></i></a></li>
 							<li><a href="#"><i class="fa fa-2x fa-linkedin"></i></a></li>
@@ -95,10 +95,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
-					<p>2017-2017 &copy; University Management System. All Right Reserved.</p>
+					<p>Copyright &copy; University Management System <?php echo date('Y'); ?>. All Right Reserved.</p>
 				</div>
 				<div class="col-md-4">
-					<strong>Developed by </strong><a class="developer" href="http://shahriarmurol.tk/" target="_blank">SIMT- CMT Batch-2013-2014</a>
+					<strong>Developed by </strong><a class="developer" href="http://shahriarwebsolution.com/" target="_blank">SIMT- CMT Batch-2013-2014</a>
 				</div>
 			</div>
 		</div>
