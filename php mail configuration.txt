@@ -1,0 +1,12 @@
+Send Email
+Php.ini
+# Xampp->php->php.ini =(line 1142/1054 ) 
+->sendmail_path = sendmail_path = "\"D:\apps\xampp\sendmail\sendmail.exe\" -t"
+Sendmail.ini
+# xampp->sendmail->sendmail.ini = (line number 14)
+smtp_server=smtp.gmail.com
+	Line 18 = smtp_port= 587 //587 for gmail
+	Line 46 = auth_username=shahriarmurolcse@gmail.com
+	Line 47 = auth_password=email address password
+
+https://myaccount.google.com/lesssecureapps (turn on)

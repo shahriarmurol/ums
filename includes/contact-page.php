@@ -1,3 +1,84 @@
+<?php 
+	$nameError = $emailError  = $websiteError = $commentError = $result = "" ;
+	$name = $email = $gender = $website = $comment = "";
+
+	if(isset($_POST["submit"])){
+		//for name field
+		if(empty($_POST["name"])){
+			$nameError = "Name is required";
+		}else{
+			$name = testUserInput($_POST["name"]);
+			if(!preg_match("/^[A-Za-z. ]*$/", $name)){
+				$nameError = "Only Letters and white space are allowed";
+			}
+		}
+		// for email field
+		if(empty($_POST["email"])){
+			$emailError = "Email is required";
+		}else{
+			$email = testUserInput($_POST["email"]);
+			if(!preg_match("/[a-zA-Z0-9._-]{3,}@[a-zA-Z0-9._-]{3,}[.]{1}[a-zA-Z0-9._-]{2,}/",$email)){
+				$emailError = "Invalid Email Format";
+			}
+		}
+		// for website field
+		if(empty($_POST["website"])){
+			$websiteError = "Website is required";
+		}else{
+			$website = testUserInput($_POST["website"]);
+			if(!preg_match("/(http:|https:|ftp:)\/\/+[a-zA-Z0-9.\-_\/?\$=&\#\~`!]+\.[a-zA-Z0-9.\-_\/?\$=&\#\~`!]*/",$website)){
+				$websiteError = "Invalid URL Format";
+			}
+		}
+		// for website field
+		if(empty($_POST["comment"])){
+			$commentError = "Comment is required";
+		}else{
+			$comment = testUserInput($_POST["comment"]);
+		}
+		// ==================== print data =================
+		//if not empty
+		if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['gender']) && !empty($_POST['website'])){
+			//if is valid
+			if( (preg_match("/^[A-Za-z. ]*$/",$name)== true) && preg_match("/[a-zA-Z0-9._-]{3,}@[a-zA-Z0-9._-]{3,}[.]{1}[a-zA-Z0-9._-]{2,}/",$email) && preg_match("/(http:|https:|ftp:)\/\/+[a-zA-Z0-9.\-_\/?\$=&\#\~`!]+\.[a-zA-Z0-9.\-_\/?\$=&\#\~`!]*/",$website) ){
+
+				// echo "<h2>Your Sibmit Information</h2><br>";
+				// echo "Name: ".ucwords($_POST['name'])."<br>";
+				// echo "Email: {$_POST['email']}<br>";
+				// echo "Gender: {$_POST['gender']}<br>";
+				// echo "Website: {$_POST['website']}<br>";
+				// echo "Comment: {$_POST['comment']}<br>";
+
+				//php mail
+					$emaiLTo="shahriarmurolcse@gmail.com";
+					$subject = "Contact Form";
+					$body = "A person Name: ".$_POST["name"]." With the Eemail : ".$_POST["email"]." have website: ".$_POST["website"]." Subject : ".$_POST['subject']." Added Comment: ".$_POST["comment"];
+					$sender ="From:{$_POST['email']}";
+						if(mail($emaiLTo,$subject,$body,$sender)){
+							$result =  "Mail sent successfully!";
+							echo "Mail sent successfully!";
+						}else{
+							$result =  "Mail not sent!";
+							echo  "Mail not sent!";
+						}
+				//end of php mail
+
+			}else{
+				echo '<span class="error">Please complete and correct your form again</span>';
+			}
+		} 
+		// =============== end of printing ======================
+
+	} //end of submit
+
+	//data filtering function
+	function testUserInput($data){
+		$data = trim($data);
+		$data = htmlentities($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}
+?>
 <style>
 	.err{
 		color: red;
@@ -10,6 +91,7 @@
 <div class="contact-section section-padding box">
 	<div class="container">
 		<div class="row">
+		<span style="color:red;font-weight:bold;"> <?php 	echo $result; ?> </span>
 			<h1 class="text-center">Contact us</h1>
 			<div class="col-md-6">
 				<div class="address">
@@ -24,25 +106,30 @@
 				</div>
 				<div class="send-message">
 					<h2 class="text-center">Leave a Message</h2>
-					<form action="admin/pages/msg-insert.php" method="POST">
+					<!-- form -->
+					<form action="" method="POST">
 						<div class="form-group">
-							<label for="name">Name </label> 
-							<input type="text" name="msg_name" id="name" placeholder="Name" class="form-control" required="1" />
+							<label for="name">Name  <?php echo $nameError; ?></label> 
+							<input type="text" name="name" id="name" placeholder="Name" class="form-control" required="1" />
 						</div>
 						<div class="form-group">
-							<label for="email">Email</label>
-							<input type="email" name="msg_email" id="email" placeholder="Email Address" class="form-control" required="1" />
+							<label for="email">Email <?php echo $emailError; ?></label>
+							<input type="email" name="email" id="email" placeholder="Email Address" class="form-control" required="1" />
+						</div>
+						<div class="form-group">
+							<label for="website">Website</label>
+							<input type="url" name="website" id="website" placeholder="Website url" class="form-control" required="1" />
 						</div>
 						<div class="form-group">
 							<label for="subject">Subject</label>
-							<input type="text" name="msg_subject" id="subject" placeholder="Subject " class="form-control" required="1" />
+							<input type="text" name="subject" id="subject" placeholder="Subject " class="form-control" required="1" />
 						</div>
 						<div class="form-group">
-							<label for="message">Message</label>
-							<textarea name="msg_message" id="msg_message" rows="5"  class="form-control" placeholder="Type your Messages here.." required=""></textarea>
+							<label for="comment">Message <?php echo $commentError; ?></label>
+							<textarea name="comment" id="comment" rows="5"  class="form-control" placeholder="Type your Messages here.." required=""></textarea>
 						</div>
 						<div class="text-center">
-							<input type="submit" name="action" value="Send" class="btn btn-lg btn-success">
+							<input type="submit" name="submit" value="Send" class="btn btn-lg btn-success">
 						</div>
 					</form>
 				</div>
