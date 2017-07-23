@@ -68,10 +68,10 @@
 
 						if(mail($emaiLTo,$subject,$body,$sender)){
 							$result =  "Mail sent successfully!";
-							echo "Mail sent successfully!";
+							//echo "Mail sent successfully!";
 						}else{
 							$result =  "Mail not sent!";
-							echo  "Mail not sent!";
+							//echo  "Mail not sent!";
 						}
 				//end of php mail
 
@@ -98,12 +98,43 @@
 		margin-left: 15px;
 		font-weight: 700;
 	}
+	body > div{
+    border:1px solid grey;
+}
+html, body, #msgbox {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+#msgbox {
+    overflow:hidden;
+    position:relative;
+}
+#hideMe {
+    -webkit-animation: cssAnimation 5s forwards; 
+    animation: cssAnimation 5s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+
 </style>
 <!-- contact -->
 <div class="contact-section section-padding box">
 	<div class="container">
 		<div class="row">
-		<span style="color:red;font-weight:bold;"> <?php 	echo $result; ?> </span>
+		<div id="msgbox">
+			<span onload="myFunction()" id="hideMe" style="color:red;font-weight:bold;padding-left:30px;font-size:36px;"> <?php echo $result; ?> </span>
+		</div>
+
 			<h1 class="text-center">Contact us</h1>
 			<div class="col-md-6">
 				<div class="address">
